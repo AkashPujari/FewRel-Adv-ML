@@ -3,7 +3,6 @@ from fewshot_re_kit.data_loader import get_loader, get_loader_pair, get_loader_u
 from fewshot_re_kit.framework_noneuclidean import FewShotREFramework
 from fewshot_re_kit.sentence_encoder import CNNSentenceEncoder, BERTSentenceEncoder, BERTPAIRSentenceEncoder, RobertaSentenceEncoder, RobertaPAIRSentenceEncoder
 import models
-from models.pair import Pair
 from models.pair_noneuclidean_hyperbolic import Pair_noneuclidean_hyperbolic
 import sys
 import torch
