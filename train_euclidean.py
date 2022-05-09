@@ -2,14 +2,7 @@ from fewshot_re_kit.data_loader import get_loader, get_loader_pair, get_loader_u
 from fewshot_re_kit.framework import FewShotREFramework
 from fewshot_re_kit.sentence_encoder import CNNSentenceEncoder, BERTSentenceEncoder, BERTPAIRSentenceEncoder, RobertaSentenceEncoder, RobertaPAIRSentenceEncoder
 import models
-from models.proto import Proto
-from models.gnn import GNN
-from models.snail import SNAIL
-from models.metanet import MetaNet
-from models.siamese import Siamese
 from models.pair import Pair
-from models.d import Discriminator
-from models.mtb import Mtb
 import sys
 import torch
 from torch import optim, nn
@@ -196,20 +189,8 @@ def main():
     if len(opt.ckpt_name) > 0:
         prefix += '-' + opt.ckpt_name
     
-    if model_name == 'proto':
-        model = Proto(sentence_encoder, dot=opt.dot)
-    elif model_name == 'gnn':
-        model = GNN(sentence_encoder, N, hidden_size=opt.hidden_size)
-    elif model_name == 'snail':
-        model = SNAIL(sentence_encoder, N, K, hidden_size=opt.hidden_size)
-    elif model_name == 'metanet':
-        model = MetaNet(N, K, sentence_encoder.embedding, max_length)
-    elif model_name == 'siamese':
-        model = Siamese(sentence_encoder, hidden_size=opt.hidden_size, dropout=opt.dropout)
-    elif model_name == 'pair':
+    if model_name == 'pair':
         model = Pair(sentence_encoder, hidden_size=opt.hidden_size)
-    elif model_name == 'mtb':
-        model = Mtb(sentence_encoder, use_dropout=not opt.no_dropout)
     else:
         raise NotImplementedError
     
