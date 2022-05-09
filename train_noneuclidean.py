@@ -3,15 +3,8 @@ from fewshot_re_kit.data_loader import get_loader, get_loader_pair, get_loader_u
 from fewshot_re_kit.framework_noneuclidean import FewShotREFramework
 from fewshot_re_kit.sentence_encoder import CNNSentenceEncoder, BERTSentenceEncoder, BERTPAIRSentenceEncoder, RobertaSentenceEncoder, RobertaPAIRSentenceEncoder
 import models
-from models.proto import Proto
-from models.gnn import GNN
-from models.snail import SNAIL
-from models.metanet import MetaNet
-from models.siamese import Siamese
 from models.pair import Pair
 from models.pair_noneuclidean import Pair_noneuclidean
-from models.d import Discriminator
-from models.mtb import Mtb
 import sys
 import torch
 from torch import optim, nn
