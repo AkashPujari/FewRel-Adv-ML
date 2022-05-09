@@ -168,13 +168,8 @@ def main():
    
     if opt.optim == 'sgd':
         pytorch_optim = moptim.rSGD
-    elif opt.optim == 'adam':
-        pytorch_optim = optim.Adam
     elif opt.optim == 'adagrad':
         pytorch_optim = moptim.rAdagrad
-    elif opt.optim == 'adamw':
-        from transformers import AdamW
-        pytorch_optim = AdamW
     else:
         raise NotImplementedError
     if opt.adv:
@@ -195,22 +190,10 @@ def main():
     if len(opt.ckpt_name) > 0:
         prefix += '-' + opt.ckpt_name
     
-    if model_name == 'proto':
-        model = Proto(sentence_encoder, dot=opt.dot)
-    elif model_name == 'gnn':
-        model = GNN(sentence_encoder, N, hidden_size=opt.hidden_size)
-    elif model_name == 'snail':
-        model = SNAIL(sentence_encoder, N, K, hidden_size=opt.hidden_size)
-    elif model_name == 'metanet':
-        model = MetaNet(N, K, sentence_encoder.embedding, max_length)
-    elif model_name == 'siamese':
-        model = Siamese(sentence_encoder, hidden_size=opt.hidden_size, dropout=opt.dropout)
-    elif model_name == 'pair':
+    if model_name == 'pair':
         model = Pair(sentence_encoder, hidden_size=opt.hidden_size)
     elif model_name == 'pair_ne':
         model = Pair_noneuclidean_hyperbolic(sentence_encoder, hidden_size=opt.hidden_size)
-    elif model_name == 'mtb':
-        model = Mtb(sentence_encoder, use_dropout=not opt.no_dropout)
     else:
         raise NotImplementedError
     
