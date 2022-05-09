@@ -1,7 +1,7 @@
 # FewRel-Adv-ML
 Meta Learning on FewRel in Euclidean and Non Euclidean Space
 
-## Training the model in Euclidean space
+## Training and Evaluating the model in Euclidean space
 ```bash
 python train_demo.py \
     --trainN 5 --N 5 --K 1 --Q 1 \
@@ -9,7 +9,7 @@ python train_demo.py \
     --batch_size 4 \
 ```
 
-## Training the model in Non Euclidean space
+## Training and Evaluating the model in Non Euclidean space
 
 Stiefel + rSGD
 ```bash
