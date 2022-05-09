@@ -47,3 +47,11 @@ python train_noneuclidean_hyperbolic.py \
     --batch_size 4 --optim adagrad \
 ```
     
+## Results
+| S.no |         Model         | Test Accuracy | Train Accuracy | Training Loss |
+|:----:|:---------------------:|:-------------:|:--------------:|:-------------:|
+|   1  |  Euclidean / Baseline |     84.86     |      95.65     |    0.117175   |
+|   2  |     Stiefel + rSGD    |      84.6     |      94.91     |    0.140056   |
+|   3  |   Hyperbolic + rSGD   |     86.97     |      96.91     |    0.138694   |
+|   4  |   Stiefel + rAdagrad  |     86.52     |      95.3      |    0.123869   |
+|   5  | Hyperbolic + rAdagrad |     85.88     |      94.78     |    0.142596   |
