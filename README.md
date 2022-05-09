@@ -1,5 +1,5 @@
 # FewRel-Adv-ML
-Meta Learning on FewRel Dataset in Euclidean and Non Euclidean Space
+Meta Learning on FewRel Dataset in Euclidean and Non Euclidean Space.
 
 
 Requirements can be installed by running: 
