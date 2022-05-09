@@ -1,5 +1,5 @@
 # FewRel-Adv-ML
-Meta Learning on FewRel in Euclidean and Non Euclidean Space
+Meta Learning on FewRel Dataset in Euclidean and Non Euclidean Space
 
 ## Training and Evaluating the model in Euclidean space
 ```bash
