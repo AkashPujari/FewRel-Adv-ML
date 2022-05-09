@@ -47,7 +47,7 @@ python train_noneuclidean_hyperbolic.py \
     --batch_size 4 --optim adagrad \
 ```
     
-## Results
+## Results [5-way 1-shot Meta Learning]
 | S.no |         Model         | Test Accuracy | Train Accuracy | Training Loss |
 |:----:|:---------------------:|:-------------:|:--------------:|:-------------:|
 |   1  |  Euclidean / Baseline |     84.86     |      95.65     |    0.117175   |
