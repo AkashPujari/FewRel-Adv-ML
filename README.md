@@ -1,6 +1,10 @@
 # FewRel-Adv-ML
 Meta Learning on FewRel Dataset in Euclidean and Non Euclidean Space
 
+##Data
+
+The dataset has already be contained in the github repo. However, due to the large size, glove files (pre-trained word embeddings) and BERT pretrain checkpoint are not included. Please download `pretrain.tar` from [here](https://drive.google.com/file/d/1QbocSumLcA-krPUSYEGxw_TMI0N9l5SQ/view?usp=sharing) and put it under the root. Then run `tar xvf pretrain.tar` to decompress it.
+
 ## Training and Evaluating the model in Euclidean space
 ```bash
 python train_euclidean.py \
